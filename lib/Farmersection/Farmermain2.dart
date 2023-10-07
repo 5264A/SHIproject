@@ -11,6 +11,7 @@ import '../MidSeller/MainPage/gridview.dart';
 import '../TopSellersList/SellerHomeList.dart';
 import '../widgets/big_text.dart';
 import '../widgets/small_text.dart';
+import 'Garph/Graphs.dart';
 
 class Farmermain2 extends StatefulWidget {
 
@@ -29,7 +30,7 @@ class _Farmermain2State extends State<Farmermain2> {
 
 
   final CarouselController carouselController = CarouselController();
-
+  List<double> weeklySummary = [4.40, 2.50, 42.42, 10.50, 100.20, 88.99, 99.10];
   Widget build(BuildContext context) {
     return
 
@@ -41,45 +42,102 @@ class _Farmermain2State extends State<Farmermain2> {
             children: [
               // Divider(),
               //Icon Container
-
-              //Divider(),
-              SizedBox(height: 12,),
-              BigText(text: 'News & Trends'),
-              SizedBox(height: 10,),
-
-              SliderScreen(),
-              SizedBox(height:15,),
-              BigText(text: 'Price'),
               Container(
-                  margin: EdgeInsets.all(10),
-                  height: 220,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blueAccent),
-                    borderRadius: BorderRadius.circular(5),
+                height: 250,
+                width: double.infinity,
+
+                /* child: Image.asset('assets/farmermain.png',fit: BoxFit.cover, height: 250.0,
+                   width: 200,),*/
+
+                child: ClipRRect(
+
+
+                  // borderRadius: BorderRadius.only(bottomLeft:Radius.circular(10),bottomRight:Radius.circular(10)),
+
+
+                  borderRadius: BorderRadius.only(bottomRight: Radius.circular(25),bottomLeft: Radius.circular(25)),
+                  child: SizedBox.fromSize(
+                    size: Size.fromRadius(48), // Image radius
+                    child: Container(
+                        decoration: BoxDecoration(
+                          // color: Colors.redAccent,
+                        ),
+                        child: Image.asset('assets/farmermain.png', fit: BoxFit.cover)),
                   ),
-                  child:
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    child:Graph(),)
+                ),
               ),
 
-              if(index100)
-                SizedBox(height: 12,),
+              //Divider(),
+              const SizedBox(height: 18,),
               BigText(text: 'Sell Your Product'),
+              const Padding(
+                padding: EdgeInsets.only(left:120.0,right: 120.0),
+                child: Divider(height: 4,color: Colors.grey,),
+              ),
 
               // IF Else Conditioon is left--------------------------------------------------------------------------
-              SizedBox(height: 10,),
+              SizedBox(height: 18,),
               // Divider(),
               FarmerSellerScreen(),
 
-              SizedBox(height: 10,),
+              SizedBox(height: 17,),
+
+
+              BigText(text: 'News & Trends'),
+             const Padding(
+               padding: EdgeInsets.only(left:140.0,right: 140.0),
+               child: Divider(height: 4,color: Colors.grey,),
+             ),
+
+
+              const SizedBox(height: 18,),
+
+              const SliderScreen(),
+              const SizedBox(height:17,),
+              BigText(text: 'Price'),
+              const Padding(
+                padding: EdgeInsets.only(left:180.0,right: 180.0),
+                child: Divider(height: 4,color: Colors.grey,),
+              ),
+
+              Column(
+                children: [
+                  Container(
+                      margin: EdgeInsets.all(10),
+                      height: 220,
+                      decoration: BoxDecoration(
+                       // border: Border.all(color: Colors.blueAccent),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child:
+
+                          MyBarGraphFarmer(weeklysummary: weeklySummary,),
+
+
+
+                  ),
+                  SmallText(text: 'Slide Left For Raw And Fresh Wool Price >>>'),
+                ],
+              ),
+
+
+
+              SizedBox(height: 18,),
+
+
 
               BigText(text: 'Top-Traders'),
+              const Padding(
+                padding: EdgeInsets.only(left:150.0,right: 150.0),
+                child: Divider(height: 4,color: Colors.grey,),
+              ),
               Divider(),
               //SELLERS LIST ALSO CONTAINS IN IF_ELSE;
-              const SizedBox(
+              Container(
+
                 width: double.infinity,
-                height: 220,
+                height: 260,
+
                 child: SellersHomePageList(),
 
               ),

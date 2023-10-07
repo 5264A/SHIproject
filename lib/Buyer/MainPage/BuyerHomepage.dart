@@ -51,83 +51,74 @@ class _BuyerHomePageState extends State<BuyerHomePage> {
    
 
     return  SafeArea(
+      child: Scaffold(
 
-      
-        child: Scaffold(
-
-          body:Container(
-            color: Colors.transparent,
-            child: Column(
-            children: [
-
+        body:Container(
+          color: Colors.transparent,
+          child: Column(
+          children: [
             Container(
 
-            padding: EdgeInsets.only(left:20,right: 20),
-            margin: EdgeInsets.only(top: 10),
-
-            child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-            Column(
-            children: [
-            Row(
-            children:[
+              //color: Colors.redAccent,
 
 
-            Icon(Icons.location_on),
+              padding: EdgeInsets.only(left:20,right:10),
+              color: Color(0xffEADDCA),
+              // margin: EdgeInsets.only(top: 10),
 
-              //if(boolll==true)getLatLong(),
+
+              child: Container(
+                margin: EdgeInsets.only(top: 14),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Row(
+                          children:[
+                            Icon(Icons.location_on,size: 18,),
+
+                            //if(boolll==true)getLatLong(),
+                            BigText(text: "Hec-Admin",color: Colors.black,size: 20,),
+                            Icon(Icons.arrow_downward_outlined,size: 17,),
+                          ],
+                        ),
+                        Row(
+                          children:[
+                            SmallText(text: "Ranchi",color: Colors.black87,),
+                          ],),
+                      ],
+
+                    ),
+
+                    IconButton(
+                      padding: EdgeInsets.only(bottom: 10),
+                      icon: Icon(Icons.menu_outlined),
+
+                      onPressed: () {
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>ProfileClick()));
+                        /* Your code */
+                      },
+                    ),
+
+                  ],),
+              ),),
 
 
-            BigText(text: "Sri-Lunka",color: Colors.blueAccent,size: 20,),
-            Icon(Icons.arrow_downward_outlined),
-            ],
-            ),
-            Row(
-            children:[
-            SmallText(text: "Ranchi",color: Colors.black26,),
-            ],),
-            ],
+            SizedBox(height: 8,),
 
-            ),
-
-            Container(
-              width: 45,
-              height: 45,
-
-              child:IconButton(
-            icon: Padding(
-              padding: const EdgeInsets.only(right: 0),
-              child: Icon(Icons.menu_rounded),
-            ),
-            onPressed: () {
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>ProfileClick()));
-            /* Your code */
-            },
-            ),
-            ),
-
-            ],),),
-
-            Padding(
-        padding: const EdgeInsets.all(10.0),
-
-        ),
-              SizedBox(height: 8,),
-
-              Expanded(child: SingleChildScrollView(child:BuyerHomepage2(),),),
+            Expanded(child: SingleChildScrollView(child:BuyerHomepage2(),),),
 
 
 
-        ],),
-          ),
-
-
-
-
-
+      ],),
         ),
 
+
+
+
+
+      ),
     );
     }
 

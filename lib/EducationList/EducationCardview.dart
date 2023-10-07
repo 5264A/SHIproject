@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -35,30 +36,25 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
   Widget build(BuildContext context) {
     return Expanded(
       child: SizedBox(
-        height: 250,
+        height: 200,
         width: 400,
         child: Card(
-          color: Colors.white,
+          //color: Color(0xffefedf9),
+          color:CupertinoColors.white,
           child: Row(
             children: [
               Column(
                 children: [
-                  Container(
-                    height: 180,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-
-                    child: Image.network(
-                      widget.imageUrl,
-                      fit: BoxFit.cover,
-                     // centerSlice: Rect.fromCircle(center: , radius: radius),
-
-                    ),
+                  SizedBox(height: 15,),
+                  CircleAvatar(
+                    radius: 42.0,
+                    backgroundImage:
+                    NetworkImage('https://via.placeholder.com/150'),
+                    backgroundColor: Colors.transparent,
                   ),
+
                   const SizedBox(
-                    height: 50,
+                    height: 20,
                   )
                 ],
               ),
@@ -66,7 +62,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(
-                    height: 10,
+                    height: 7,
                   ),
                   Padding(
                     padding:
@@ -83,7 +79,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                         Text(
                           widget.title,
                           style: const TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 24),
+                              fontWeight: FontWeight.w700, fontSize: 18),
                         ),
                       ],
                     ),
@@ -95,7 +91,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                           width: 10,
                         ),
                         Container(
-                          height: 30,
+                          height: 25,
                           width: 60,
                           decoration: BoxDecoration(
                               color: Colors.green,
@@ -109,7 +105,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                                 Text(
                                   widget.rating.toString(),
                                   style: const TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.white, fontSize: 15),
                                 ),
                                 const SizedBox(
                                   width: 4,
@@ -117,7 +113,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                                 const Icon(
                                   Icons.star,
                                   color: Colors.white,
-                                  size: 18,
+                                  size: 15,
                                 ),
                               ],
                             ),
@@ -129,7 +125,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                         Text(
                           "${widget.ratings} Ratings",
                           style: const TextStyle(
-                              fontWeight: FontWeight.w600, fontSize: 18),
+                              fontWeight: FontWeight.w600, fontSize: 15),
                         ),
                         const SizedBox(
                           width: 55,
@@ -148,7 +144,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                         Text(
                           widget.address,
                           style: const TextStyle(
-                              fontSize: 19,
+                              fontSize: 14,
                               color: Color.fromARGB(255, 171, 169, 169)),
                         ),
                         const SizedBox(
@@ -157,26 +153,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding:
-                    const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                    child: Row(
-                      children: [
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          widget.remarks,
-                          style: const TextStyle(
-                              fontSize: 19,
-                              color: Color.fromARGB(255, 17, 14, 14)),
-                        ),
-                        const SizedBox(
-                          width: 60,
-                        )
-                      ],
-                    ),
-                  ),
+
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2),
                     child: Row(
@@ -188,12 +165,12 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                           children:[
                             Text('Wool-Type = ', style: const TextStyle(
                                 fontSize: 15,
-                                color: Colors.deepOrange),),
+                                color: Colors.black),),
                         Text(
                           widget.educatortype,
                           style: const TextStyle(
                               fontSize: 15,
-                              color: Colors.blueAccent,),
+                              color: Colors.black,),
                         ),],),
                         const SizedBox(
                           width: 85,
@@ -213,7 +190,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                         Text(
                           " ${widget.Educationenquiries}INR per hr.",
                           style: const TextStyle(
-                              fontSize: 20,
+                              fontSize: 15,
                               color: Color.fromARGB(255, 11, 12, 11)),
                         ),
                         const SizedBox(
@@ -244,7 +221,8 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                             width: 110,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(255, 250, 119, 71),
+                              //color: Color(0xffcbc3e3),
+                              color:Colors.white70,
                             ),
                             child: const Row(
                               children: [
@@ -253,7 +231,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                                 ),
                                 Icon(
                                   Icons.call,
-                                  color: Colors.white,
+                                  color: Colors.blue,
                                 ),
                                 SizedBox(
                                   width: 5,
@@ -263,7 +241,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                                   style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.w700,
-                                      color: Colors.white),
+                                      color: Colors.blue),
                                 )
                               ],
                             ),
@@ -297,7 +275,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                             width: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: Color.fromARGB(255, 250, 119, 71),
+                              color: Colors.white38,
                             ),
                             child: const Row(
                               children: [
@@ -306,7 +284,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                                 ),
                                 Icon(
                                   Icons.payment,
-                                  color: Colors.white,
+                                  color: Colors.blue,
                                 ),
                                 SizedBox(
                                   width: 5,
@@ -316,7 +294,7 @@ class _EducationCommonCardState extends State<EducationCommonCard> {
                                   style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.w700,
-                                      color: Colors.white),
+                                      color: Colors.blue),
                                 )
                               ],
                             ),

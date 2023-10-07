@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:projectwork/LocationData/getlocation.dart';
 
 import '../../EducationList/Educationmain.dart';
+import '../../OrderList.dart';
 import '../../StateListData/StateData.dart';
 import '../../WoolEducation/WoolEducation.dart';
 import '../MainPage/BuyerHomepage.dart';
@@ -17,7 +18,7 @@ class BuyerBottombar extends StatefulWidget {
 
 class _BuyerBottombarState extends State<BuyerBottombar> {
   PageController pageController=PageController();
-  List<Widget>pages=[BuyerHomePage(),StateData(),EducationList(),GetLocation()];
+  List<Widget>pages=[BuyerHomePage(),StateData(),EducationList(),OrderList()];
 
  // int selectIndex=0;
   void onPageChanged(int index){
@@ -40,27 +41,27 @@ class _BuyerBottombarState extends State<BuyerBottombar> {
           onPageChanged: onPageChanged,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.white38,
           type: BottomNavigationBarType.fixed,
           onTap: onItemTap,
           items: [
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.home,),
-                label: 'Home',backgroundColor: Colors.blue),
+                icon: Icon(Icons.home,color: Color(0xffD27D2D)),
+                label: 'Home',backgroundColor: Color(0xffEADDCA),),
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.price_change_outlined,),
-                label: 'Wool-Price',backgroundColor: Colors.blue),
+                icon: Icon(Icons.price_change_outlined,color: Color(0xffD27D2D)),
+                label: 'Wool-Price',backgroundColor:Color(0xffEADDCA),),
 
 
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.cast_for_education,),
-                label: 'Education',backgroundColor: Colors.blue),
+                icon: Icon(Icons.cast_for_education,color: Color(0xffD27D2D)),
+                label: 'Education',backgroundColor: Color(0xffEADDCA),),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home,),
-                label: 'Home',backgroundColor: Colors.blue),
+                icon: Icon(Icons.shopping_cart,color: Color(0xffD27D2D)),
+                label: 'Your Orders',backgroundColor: Color(0xffEADDCA),),
           ],
         ),
       ),

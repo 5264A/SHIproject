@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class OrderListSellerSection extends StatelessWidget {
@@ -12,7 +13,7 @@ class OrderListSellerSection extends StatelessWidget {
       appBar: AppBar(
         leading: BackButton(),
         title: const Text("Sellers-List"),
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: CupertinoColors.white,
         elevation: 2,
         actions: <Widget>[
           Container(
@@ -52,39 +53,39 @@ class Lists extends StatelessWidget {
         ratings: "5.0/80",
         discount: "10 %",
         image:
-        "https://images.pexels.com/photos/672142/pexels-photo-672142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnNyFKJn7jg4hgLfbUuFNa2A5SazzGSUBFgbRKvKRmSihhUsq1I4K1vRh2Mb1JyqpUuo&usqp=CAU"),
     Item(
-        Name: 'Singapore Zoo',
-        Address: "Parks",
-        Wooltype: "Singapore",
+        Name: 'Sham Suman',
+        Address: "Kachori Bazaar",
+        Wooltype: "Assam",
         ratings: "4.5/90",
         discount: null,
         image:
-        "https://images.pexels.com/photos/1736222/pexels-photo-1736222.jpeg?cs=srgb&dl=adult-adventure-backpacker-1736222.jpg&fm=jpg"),
+        "https://assets.isu.pub/document-structure/230622223422-1a3dfdedf6f41e7c7115887d8afe9f54/v1/86cb7548ed2144df3839fcf78691e38b.jpeg"),
     Item(
-        Name: 'National Orchid Garden',
-        Address: "Parks",
-        Wooltype: "Singapore",
+        Name: 'Mohit kumar',
+        Address: "Karol Bagh",
+        Wooltype: "Delhi",
         ratings: "4.5/90",
         discount: "12 %",
         image:
-        "https://images.pexels.com/photos/62403/pexels-photo-62403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+        "https://c02.purpledshub.com/uploads/sites/47/2022/11/PHOTO-2021-11-08-11-11-52-3WillYoungcmyk-9183f6e.jpg"),
     Item(
-        Name: 'Godabari',
-        Address: "Parks",
-        Wooltype: "Singapore",
+        Name: 'Ayush Shingh',
+        Address: "NIT Ghat",
+        Wooltype: "Patna",
         ratings: "4.5/90",
         discount: "15 %",
         image:
-        "https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+        "https://assets.isu.pub/document-structure/230622223422-1a3dfdedf6f41e7c7115887d8afe9f54/v1/86cb7548ed2144df3839fcf78691e38b.jpeg"),
     Item(
-        Name: 'Rara National Park',
-        Address: "Parks",
-        Wooltype: "Singapore",
+        Name: 'Mihir Dixit',
+        Address: "Jarshuguda",
+        Wooltype: "Main Road",
         ratings: "4.5/90",
         discount: "12 %",
         image:
-        "https://images.pexels.com/photos/1319515/pexels-photo-1319515.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnNyFKJn7jg4hgLfbUuFNa2A5SazzGSUBFgbRKvKRmSihhUsq1I4K1vRh2Mb1JyqpUuo&usqp=CAU"),
   ];
 
   Lists({super.key});
@@ -101,11 +102,13 @@ class Lists extends StatelessWidget {
         Item item = _data[index];
         return Card(
           elevation: 3,
+       //   color: CupertinoColors.white,
           child: Row(
             children: <Widget>[
               Container(
                 height: 125,
                 width: 110,
+               // color: CupertinoColors.white,
                 padding:
                 const EdgeInsets.only(left: 0, top: 10, bottom: 70, right: 20),
                 decoration: BoxDecoration(
@@ -145,7 +148,7 @@ class Lists extends StatelessWidget {
                     Text(
                       item.Name!,
                       style: const TextStyle(
-                          color: Colors.deepOrange,
+                          color: Colors.blue,
                           fontWeight: FontWeight.w700,
                           fontSize: 17),
                     ),
@@ -164,27 +167,27 @@ class Lists extends StatelessWidget {
                       children: <Widget>[
                         Icon(
                           Icons.star,
-                          color: Colors.pink,
+                          color: Colors.lightBlue,
                           size: 18,
                         ),
                         Icon(
                           Icons.star,
-                          color: Colors.pink,
+                          color: Colors.lightBlue,
                           size: 18,
                         ),
                         Icon(
                           Icons.star,
-                          color: Colors.pink,
+                          color: Colors.lightBlue,
                           size: 18,
                         ),
                         Icon(
                           Icons.star,
-                          color: Colors.pink,
+                          color: Colors.lightBlue,
                           size: 18,
                         ),
                         Icon(
                           Icons.star,
-                          color: Colors.pink,
+                          color: Colors.lightBlue,
                           size: 18,
                         ),
                       ],

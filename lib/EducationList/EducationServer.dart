@@ -30,7 +30,7 @@ const availableLogistic = [
       mailId: "mohit.21ug2013@iiitranchi.ac.in",
       number: 8210688300,
       serviceUrl: "https://www.delhivery.com/",
-      title: 'Shirsha-Classes',
+      title: 'Mitra Classes',
       rating: 4.2,
       ratings: 200,
       remarks: 'most trusted',
@@ -38,12 +38,12 @@ const availableLogistic = [
       price: 290,
       address: 'Namkum Thana Namkum',
       imageUrl:
-      "https://media.gettyimages.com/id/685339256/photo/bella-hadid-attends-the-okja-screening-during-the-70th-annual-cannes-film-festival-at-palais.jpg?s=612x612&w=gi&k=20&c=9Y5XFJ4TISmSpBSbblQlUZKje7VZaNEUTyL58rr1HOY="),
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvG5OAXv_NMUpwhXdP21Qls0GqgreV6kb1g&usqp=CAU"),
   EducationService(
       mailId: "mohit.21ug2013@iiitranchi.ac.in",
       number: 8210688300,
       serviceUrl: "https://www.xpressbees.com/",
-      title: 'Akg-Dealer-Limited',
+      title: 'Reso Classes',
       rating: 4.0,
       ratings: 324,
       remarks: 'fantastic',
@@ -51,12 +51,12 @@ const availableLogistic = [
       price: 500,
       address: 'Kanke Road Ranchi',
       imageUrl:
-      "https://media.gettyimages.com/id/685339256/photo/bella-hadid-attends-the-okja-screening-during-the-70th-annual-cannes-film-festival-at-palais.jpg?s=612x612&w=gi&k=20&c=9Y5XFJ4TISmSpBSbblQlUZKje7VZaNEUTyL58rr1HOY="),
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvG5OAXv_NMUpwhXdP21Qls0GqgreV6kb1g&usqp=CAU"),
   EducationService(
       mailId: "mohit.21ug2013@iiitranchi.ac.in",
       number: 18602331234,
       serviceUrl: "https://www.bluedart.com/",
-      title: 'Akg-Dealer-Limited',
+      title: 'Mehul - Classes',
       rating: 3.9,
       ratings: 444,
       remarks: 'awesome',
@@ -64,5 +64,48 @@ const availableLogistic = [
       Educatortype: 'wooltype3',
       price: 900,
       imageUrl:
-      "https://media.gettyimages.com/id/685339256/photo/bella-hadid-attends-the-okja-screening-during-the-70th-annual-cannes-film-festival-at-palais.jpg?s=612x612&w=gi&k=20&c=9Y5XFJ4TISmSpBSbblQlUZKje7VZaNEUTyL58rr1HOY="),
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvG5OAXv_NMUpwhXdP21Qls0GqgreV6kb1g&usqp=CAU"),
+  EducationService(
+      mailId: "mohit.21ug2013@iiitranchi.ac.in",
+      number: 18602331234,
+      serviceUrl: "https://www.bluedart.com/",
+      title: 'Mehul - Classes',
+      rating: 3.9,
+      ratings: 444,
+      remarks: 'awesome',
+      address: 'Tata Road',
+      Educatortype: 'wooltype3',
+      price: 900,
+      imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvG5OAXv_NMUpwhXdP21Qls0GqgreV6kb1g&usqp=CAU"),
+
+
+  EducationService(
+      mailId: "mohit.21ug2013@iiitranchi.ac.in",
+      number: 18602331234,
+      serviceUrl: "https://www.bluedart.com/",
+      title: 'Mehul - Classes',
+      rating: 3.9,
+      ratings: 444,
+      remarks: 'awesome',
+      address: 'Tata Road',
+      Educatortype: 'wooltype3',
+      price: 900,
+      imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvG5OAXv_NMUpwhXdP21Qls0GqgreV6kb1g&usqp=CAU"),
+
+  EducationService(
+      mailId: "mohit.21ug2013@iiitranchi.ac.in",
+      number: 18602331234,
+      serviceUrl: "https://www.bluedart.com/",
+      title: 'Mehul - Classes',
+      rating: 3.9,
+      ratings: 444,
+      remarks: 'awesome',
+      address: 'Tata Road',
+      Educatortype: 'wooltype3',
+      price: 900,
+      imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvG5OAXv_NMUpwhXdP21Qls0GqgreV6kb1g&usqp=CAU"),
+
 ];

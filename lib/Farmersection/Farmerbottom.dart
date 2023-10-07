@@ -20,10 +20,10 @@ class _FarmerBottombarState extends State<FarmerBottombar> {
   PageController pageController=PageController();
   List<Widget>pages=[FarmerHomePage(),StateData(),EducationList(),FarmerShearerList()];
 
-  // int selectIndex=0;
+   int selectIndex=0;
   void onPageChanged(int index){
     setState(() {
-      // selectIndex=index;
+        selectIndex=index;
     });
   }
 
@@ -41,28 +41,28 @@ class _FarmerBottombarState extends State<FarmerBottombar> {
           onPageChanged: onPageChanged,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: Colors.white38,
           type: BottomNavigationBarType.fixed,
 
           onTap: onItemTap,
           items: [
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.home,),
-                label: 'Home',backgroundColor: Colors.blue),
+                icon: Icon(Icons.home,color: Color(0xff006400),),
+                label: 'Home',backgroundColor: Colors.redAccent),
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.price_change_outlined,),
-                label: 'Wool-Price',backgroundColor: Colors.blue),
+                icon: Icon(Icons.price_change_outlined,color: Color(0xff006400),),
+                label: 'Wool-Price',backgroundColor: Colors.redAccent,),
 
 
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.cast_for_education,),
-                label: 'Education',backgroundColor: Colors.blue),
+                icon: Icon(Icons.cast_for_education,color: Color(0xff006400),),
+                label: 'Education',),
             BottomNavigationBarItem(
-                icon: Icon(Icons.list_alt_outlined,),
-                label: 'Shearer-List',backgroundColor: Colors.blue),
+                icon: Icon(Icons.list_alt_outlined,color: Color(0xff006400),),
+                label: 'Shearer-List',),
           ],
         ),
       ),

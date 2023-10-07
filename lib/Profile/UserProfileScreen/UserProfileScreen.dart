@@ -9,8 +9,8 @@ class UserDataScreen extends StatelessWidget {
   static const String path = "lib/src/pages/profile/profile1.dart";
 
 
-  String Name="Mukul";
-  String city="Ranchi";
+  String Name="Shirsha ";
+  String city="Jamshedpur";
   String status="Seller";
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class UserDataScreen extends StatelessWidget {
       // backgroundColor: Colors.deepOrange,
       appBar: AppBar(
         title: const Text("View Profile"),
-        backgroundColor: Colors.red,
+        backgroundColor: Color(0xffcbc3e3),
         elevation: 0,
       ),
       body: ListView(
@@ -26,12 +26,14 @@ class UserDataScreen extends StatelessWidget {
           Container(
             height: 200,
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    stops: const [0.5, 0.9],
-                    colors: [Colors.red, Colors.deepOrange.shade300])),
-            child: Column(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                stops: const [0.6, 0.9],
+                colors: [Color(0xffcbc3e3),Colors.white38],
+                // color: Colors.grey,
+                ),),
+                    child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -40,19 +42,20 @@ class UserDataScreen extends StatelessWidget {
                   children: <Widget>[
                     CircleAvatar(
                       minRadius: 30.0,
-                      backgroundColor: Colors.red.shade600,
+                      backgroundColor: Color(0xfff3f2f9),
                       child: InkWell(
                         child: const Icon(
                           Icons.call,
                           size: 30.0,
+                          color: Colors.blue,
                         ),onTap: (){
                           //CALLER METHOD
                       },
                       ),
                     ),
-                    CircleAvatar(
+                    const CircleAvatar(
                       minRadius: 60,
-                      backgroundColor: Colors.deepOrange.shade300,
+                      backgroundColor: Color(0xfff3f2f9),
                       child: CircleAvatar(
                        backgroundImage: AssetImage('assets/userrr.png'),
                         minRadius: 50,
@@ -60,11 +63,12 @@ class UserDataScreen extends StatelessWidget {
                     ),
                     CircleAvatar(
                       minRadius: 30.0,
-                      backgroundColor: Colors.red.shade600,
+                      backgroundColor: Color(0xfff3f2f9),
                       child: InkWell(
                         child: const Icon(
                           Icons.message,
                           size: 30.0,
+                          color: Colors.blue,
                         ),
                         onTap: (){
                           //WhatsAPP
@@ -78,11 +82,11 @@ class UserDataScreen extends StatelessWidget {
                 ),
                  Text(
                   '$Name',
-                   style: TextStyle(fontSize: 28.0, color: Colors.white),
+                   style: TextStyle(fontSize: 28.0, color:Colors.blue,),
                 ),
                 Text(
                   "$city",
-                  style: TextStyle(fontSize: 14.0, color: Colors.red.shade700),
+                  style: TextStyle(fontSize: 14.0, color:Colors.blue,),
                 )
               ],
             ),
@@ -91,10 +95,10 @@ class UserDataScreen extends StatelessWidget {
           const ListTile(
             title: Text(
               "Email",
-              style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
+              style: TextStyle(color: Colors.blue, fontSize: 12.0),
             ),
             subtitle: Text(
-              "ram@kumar.com",
+              "shirsha123@kumar.com",
               style: TextStyle(fontSize: 18.0),
             ),
           ),
@@ -102,7 +106,7 @@ class UserDataScreen extends StatelessWidget {
           const ListTile(
             title: Text(
               "Phone",
-              style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
+              style: TextStyle(color: Colors.blue, fontSize: 12.0),
             ),
             subtitle: Text(
               "+977 9818225533",
@@ -113,7 +117,7 @@ class UserDataScreen extends StatelessWidget {
           const ListTile(
             title: Text(
               "Status",
-              style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
+              style: TextStyle(color: Colors.blue, fontSize: 12.0),
             ),
             subtitle: Text(
               "Seller",
@@ -124,10 +128,10 @@ class UserDataScreen extends StatelessWidget {
           const ListTile(
             title: Text(
               "Full Address",
-              style: TextStyle(color: Colors.deepOrange, fontSize: 12.0),
+              style: TextStyle(color: Colors.blue, fontSize: 12.0),
             ),
             subtitle: Text(
-              "facebook.com/ramkumar",
+              "Jamshedpur",
               style: TextStyle(fontSize: 18.0),
             ),
           ),

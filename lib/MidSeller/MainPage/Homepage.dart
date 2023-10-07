@@ -51,88 +51,77 @@ class _HomePageState extends State<HomePage> {
    
 
     return  SafeArea(
+      child: Scaffold(
 
-      
-        child: Scaffold(
+        body:Container(
 
-          body:Container(
-
-            child: Column(
-            children: [
+          child: Column(
+          children: [
 
             Container(
 
-              height: 200,
-              color: Colors.grey,
+              //color: Colors.redAccent,
+              color: Color(0xffEADDCA),
 
 
-
-            //padding: EdgeInsets.only(left:20,right: 20),
-           // margin: EdgeInsets.only(top: 10),
-
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-              Column(
-              children: [
-              Row(
-              children:[
+              padding: EdgeInsets.only(left:20,right:10),
+              // margin: EdgeInsets.only(top: 10),
 
 
-              Icon(Icons.location_on),
+              child: Container(
+                margin: EdgeInsets.only(top: 14),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Row(
+                          children:[
+                            Icon(Icons.location_on,size: 18,),
 
-                //if(boolll==true)getLatLong(),
+                            //if(boolll==true)getLatLong(),
+                            BigText(text: "Hec-Admin",color: Colors.black,size: 20,),
+                            Icon(Icons.arrow_downward_outlined,size: 17,),
+                          ],
+                        ),
+                        Row(
+                          children:[
+                            SmallText(text: "Ranchi",color: Colors.black87,),
+                          ],),
+                      ],
 
+                    ),
 
-              BigText(text: "Sri-Lunka",color: Colors.white,size: 20,),
-              Icon(Icons.arrow_downward_outlined),
-              ],
-              ),
-              Row(
-              children:[
-              SmallText(text: "Ranchi",color: Colors.white,),
-              ],),
-              ],
+                    IconButton(
+                      padding: EdgeInsets.only(bottom: 10),
+                      icon: Icon(Icons.menu_outlined),
 
-              ),
+                      onPressed: () {
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>ProfileClick()));
+                        /* Your code */
+                      },
+                    ),
 
-              Container(
-                margin: EdgeInsets.only(bottom: 170),
-                child: IconButton(
-
-                  //padding: const EdgeInsets.only(right: 0),
-                  onPressed: () {
-                  },  icon:Icon(Icons.menu_rounded),),
-              ),
-
-
-
-
-
-              ],),
-            ),),
-
-            Padding(
-        padding: const EdgeInsets.all(10.0),
-
-        ),
-              SizedBox(height: 8,),
-
-              Expanded(child: SingleChildScrollView(child:FoodPageBody(),),),
-
-
-
-        ],),
-          ),
+                  ],),
+              ),),
 
 
 
 
+            SizedBox(height: 8,),
 
+            Expanded(child: SingleChildScrollView(child:FoodPageBody(),),),
+
+
+
+      ],),
         ),
 
+
+
+
+
+      ),
     );
     }
 

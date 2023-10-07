@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -45,68 +46,59 @@ class _EducationListState extends State<EducationList> {
     return Scaffold(
 
         appBar: AppBar(
-         // leading: const Icon(Icons.location_pin),
-          title: Center(child: const Text("Wool-Education")),
-          actions: const [
-            //Icon(Icons.medical_information_outlined),
-            SizedBox(
-              width: 15,
-            )
+          leading: BackButton(),
+          actions: <Widget>[
+            PopupMenuButton<int>(
+              onSelected: (item) => handleClick(item),
+              itemBuilder: (context) => [
+                PopupMenuItem<int>(value: 0, child: Text('Diff-Type')),
+                PopupMenuItem<int>(value: 1, child: Text('More')),
+              ],
+            ),
           ],
+
+          backgroundColor:CupertinoColors.white,
+         // leading: const Icon(Icons.location_pin),
+          title: Text('Wool-Education'),
+
         ),
         body: Column(
           children: [
-            SizedBox(height: 5,),
+            //SizedBox(height: 5,),
 
-               Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white60,
-                      borderRadius: BorderRadius.circular(20)),
-                  child: Image.asset(
-                    'assets/education.gif',
-                    fit: BoxFit.cover,
-                    height: 220,
-                    width: double.infinity,
-                  )),
-            SizedBox(height: 15,),
-            TextField(
-              onChanged: (value) => _runFilter(value),
-              decoration: InputDecoration(
-                contentPadding:
-                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 15),
-                hintText: "Search State-Name",
-                suffixIcon: const Icon(Icons.search),
-                //prefix: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  borderSide: const BorderSide(color: Colors.blue),
-                ),
+
+
+
+            //SizedBox(height: 15,),
+            
+
+
+            Container(
+              child: Expanded(
+
+                child: ListView.builder(
+                    itemCount: availableLogistic.length,
+                    itemBuilder: (context, i) {
+                      return GestureDetector(
+                        onTap: () {
+                          launchUrl(Uri.parse(availableLogistic[i].serviceUrl),
+                              mode: LaunchMode.inAppWebView);
+                        },
+                        child: EducationCommonCard(
+                          number: availableLogistic[i].number,
+                          mailId: availableLogistic[i].mailId,
+                          title: availableLogistic[i].title,
+                          rating: availableLogistic[i].rating,
+                          ratings: availableLogistic[i].ratings,
+                          remarks: availableLogistic[i].remarks,
+                          educatortype: availableLogistic[i].Educatortype,
+                          Educationenquiries: availableLogistic[i].price,
+                          imageUrl: availableLogistic[i].imageUrl,
+                          address: availableLogistic[i].address,
+                        ),
+                      );
+                    }),
               ),
-            ),
-
-            Expanded(
-              child: ListView.builder(
-                  itemCount: availableLogistic.length,
-                  itemBuilder: (context, i) {
-                    return GestureDetector(
-                      onTap: () {
-                        launchUrl(Uri.parse(availableLogistic[i].serviceUrl),
-                            mode: LaunchMode.inAppWebView);
-                      },
-                      child: EducationCommonCard(
-                        number: availableLogistic[i].number,
-                        mailId: availableLogistic[i].mailId,
-                        title: availableLogistic[i].title,
-                        rating: availableLogistic[i].rating,
-                        ratings: availableLogistic[i].ratings,
-                        remarks: availableLogistic[i].remarks,
-                        educatortype: availableLogistic[i].Educatortype,
-                        Educationenquiries: availableLogistic[i].price,
-                        imageUrl: availableLogistic[i].imageUrl,
-                        address: availableLogistic[i].address,
-                      ),
-                    );
-                  }),
             ),
           ],
 
@@ -114,3 +106,23 @@ class _EducationListState extends State<EducationList> {
     );
   }
 }
+
+void handleClick(int item) {
+  switch (item) {
+    case 0:
+      //
+      break;
+    case 1:
+      break;
+  }
+}
+/*  Container(
+                decoration: BoxDecoration(
+                    color: Colors.white60,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Image.asset(
+                  'assets/education.gif',
+                  fit: BoxFit.cover,
+                  height: 220,
+                  width: double.infinity,
+                )),*/

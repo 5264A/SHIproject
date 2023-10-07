@@ -20,24 +20,45 @@ class _RealHomeState extends State<RealHome> {
     return Scaffold(
       body: Center(
 
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            MaterialButton(onPressed: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>FarmerBottombar()));
-            },
-              child: Text('Farmer'),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.lightGreen,
+                border: Border.all(width: 2),
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: MaterialButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>FarmerBottombar()));
+              },
+                child: Text('Farmer'),
+              ),
             ),
-            MaterialButton(onPressed: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>Bottombar()));
-            },
-              child: Text('Trader'),
+            Container(
+              decoration: BoxDecoration(
+                  color: Color(0xffEADDCA),
+                  border: Border.all(width: 2),
+                  borderRadius: BorderRadius.circular(10)
+              ),
+              child: MaterialButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>Bottombar()));
+              },
+                child: Text('Trader'),
+              ),
             ),
-            MaterialButton(onPressed: (){
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>BuyerBottombar()));
-            },
-              child: Text('Buyers'),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blueGrey,
+                  border: Border.all(width: 2),
+                  borderRadius: BorderRadius.circular(10)
+              ),
+              child: MaterialButton(onPressed: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>BuyerBottombar()));
+              },
+                child: Text('Buyers'),
+              ),
             ),
 
 

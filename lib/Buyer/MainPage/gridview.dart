@@ -12,7 +12,7 @@ class _SliderScreenState extends State<SliderScreen> {
   List imageList = [
     {"id": 1, "image_path": 'assets/news.gif'},
     {"id": 2, "image_path": 'assets/download.gif'},
-    {"id": 3, "image_path": 'assets/news_reading.gif'}
+
   ];
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;

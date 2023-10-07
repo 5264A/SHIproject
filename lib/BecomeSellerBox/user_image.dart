@@ -8,7 +8,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:image_picker_platform_interface/image_picker_platform_interface.dart';
 import 'package:projectwork/BecomeSellerBox/SellersUploadimageList/SallersUploadImageListHomePage.dart';
 
-import '../TopFarmerList/FarmerhomeCardview.dart';
 
 class UserImage extends StatefulWidget {
   const UserImage({Key? key}) : super(key: key);

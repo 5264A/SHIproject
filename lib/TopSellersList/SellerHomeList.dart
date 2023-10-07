@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'SellerhomeCardview.dart';
 
 class SellersHomePageList extends StatefulWidget {
-  const SellersHomePageList({super.key});
+   const SellersHomePageList({super.key});
 
   @override
   State<SellersHomePageList> createState() => _SellersHomePageListState();
@@ -14,6 +14,7 @@ class _SellersHomePageListState extends State<SellersHomePageList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Color(0xffFFCCCB),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -27,7 +28,7 @@ class _SellersHomePageListState extends State<SellersHomePageList> {
                   itemCount: 10,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
-                    return const Padding(
+                    return  Padding(
                       padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                       child: CardList(),
                     );

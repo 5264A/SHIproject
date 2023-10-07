@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projectwork/LocationData/getlocation.dart';
+import 'package:projectwork/OrderList.dart';
+import 'package:projectwork/OrderListSellerSection/OrderListBuyerSection.dart';
 
 import '../../EducationList/Educationmain.dart';
 import '../../StateListData/StateData.dart';
@@ -17,12 +19,12 @@ class Bottombar extends StatefulWidget {
 
 class _BottombarState extends State<Bottombar> {
   PageController pageController=PageController();
-  List<Widget>pages=[HomePage(),StateData(),EducationList(),GetLocation()];
+  List<Widget>pages=[HomePage(),StateData(),EducationList(),OrderList()];
 
- // int selectIndex=0;
+  // int selectIndex=Item as int;
   void onPageChanged(int index){
     setState(() {
-     // selectIndex=index;
+    //  selectIndex=index;
     });
   }
 
@@ -40,27 +42,27 @@ class _BottombarState extends State<Bottombar> {
           onPageChanged: onPageChanged,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.white38,
           type: BottomNavigationBarType.fixed,
           onTap: onItemTap,
           items: [
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.home,),
-                label: 'Home',backgroundColor: Colors.blue),
+                icon: Icon(Icons.home,color: Color(0xffD27D2D) ,),
+                label: 'Home',backgroundColor: Color(0xffD27D2D),),
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.price_change_outlined,),
-                label: 'Wool-Price',backgroundColor: Colors.blue),
+                icon: Icon(Icons.price_change_outlined,color:Color(0xffD27D2D),),
+                label: 'Wool-Price',backgroundColor: Color(0xffD27D2D),),
 
 
 
             BottomNavigationBarItem(
-                icon: Icon(Icons.cast_for_education,),
-                label: 'Education',backgroundColor: Colors.blue),
+                icon: Icon(Icons.cast_for_education,color: Color(0xffD27D2D),),
+                label: 'Education',backgroundColor: Color(0xffD27D2D),),
             BottomNavigationBarItem(
-                icon: Icon(Icons.home,),
-                label: 'Home',backgroundColor: Colors.blue),
+                icon: Icon(Icons.shopping_cart,color: Color(0xffD27D2D),),
+                label: 'Your Orders',backgroundColor: Color(0xffD27D2D),),
           ],
         ),
       ),

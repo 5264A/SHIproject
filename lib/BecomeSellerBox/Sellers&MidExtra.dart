@@ -30,7 +30,7 @@ class _SellersextraState extends State<Sellersextra> {
             padding: const EdgeInsets.all(16),
             height: 180,
             decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 21, 136, 230),
+                color: Color(0xffEADDCA),
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: const [
                   BoxShadow(
@@ -61,7 +61,7 @@ class _SellersextraState extends State<Sellersextra> {
                     "Become Seller",
                     style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.w500),
                   ),
                   const SizedBox(
@@ -69,7 +69,7 @@ class _SellersextraState extends State<Sellersextra> {
                   ),
                   const Text(
                     "Sell Your Product Here!",
-                    style: TextStyle(color: Colors.white, fontSize: 14),
+                    style: TextStyle(color: Colors.black, fontSize: 14),
                   )
                 ]),
           ),

@@ -51,6 +51,7 @@ dependencies:
   share_plus: ^7.1.0
   geolocator: ^10.0.1
   geocoding: ^2.1.0
+  fl_chart: ^0.63.0
 
 dev_dependencies:
   flutter_test:
@@ -88,11 +89,23 @@ flutter:
     - assets/download.gif
     - assets/news_reading.gif
     - assets/warehouse.png
+    - assets/tracking.png
     - assets/delivery-truck.png
     - assets/shopping-list.png
     - assets/userrr.png
     - assets/shearing.gif
     - assets/cg5n.gif
+    - assets/farmermain.png
+    - assets/woolsellermainpage.webp
+    - assets/handyman.jpg
+    - assets/laptop.png
+    - assets/buyermainpage.jpg
+    - assets/5865.jpg
+    - assets/woolfarm.jpeg
+    - assets/woolfarm2.jpg
+    - assets/shavingfarmer.gif
+    - assets/mainpagewool.jpg
+
 
   #   - images/a_dot_ham.jpeg
 
