@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:projectwork/Farmersection/Farmerbottom.dart';
 import 'package:projectwork/Farmersection/Farmermain2.dart';
+import 'package:projectwork/Openpageforbuyers/openpage.dart';
+
 import 'package:share_plus/share_plus.dart';
 
 import '../MidSeller/MainPage/FoodPageBody.dart';
+import '../OrderSection/Orderlist.dart';
 import '../Profile/ProfileScreen.dart';
 import '../Profile/UserProfileScreen/UserProfileScreen.dart';
 import '../widgets/big_text.dart';
@@ -180,6 +183,10 @@ class _FarmerHomePageState extends State<FarmerHomePage> {
                   _buildDivider(),
                   InkWell(child: _buildRow(Icons.person_pin, "Home"),
                     onTap: () =>Navigator.push(context,MaterialPageRoute(builder: (context)=>UserDataScreen())),
+                  ),
+                  _buildDivider(),
+                  InkWell(child: _buildRow(Icons.shopping_cart, "Your Order"), onTap: () =>Navigator.push(context,MaterialPageRoute(builder: (context)=>OrderList())),
+
                   ),
                   _buildDivider(),
                   InkWell(child: _buildRow(Icons.share_outlined, "Share"), onTap: () => Share.share('com.example.projectwork'),),

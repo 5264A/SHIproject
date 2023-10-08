@@ -10,6 +10,7 @@ import 'package:projectwork/MidSeller/MainPage/Homepage.dart';
 import 'package:projectwork/Profile/UserProfileScreen/UserProfileScreen.dart';
 import 'package:projectwork/StateListData/StateData.dart';
 import 'package:projectwork/TrackingSide/Trackingpage1.dart';
+import 'package:projectwork/cart/cart.dart';
 import 'package:projectwork/signuplogin.dart';
 
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:AuthPage(),
+      home:RealHome(),
     );
   }
 }

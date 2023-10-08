@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:share_plus/share_plus.dart';
 
+import '../Openpageforbuyers/openpage.dart';
 import 'UserProfileScreen/UserProfileScreen.dart';
 
 class ProfileClick extends StatelessWidget {
@@ -56,6 +57,12 @@ class ProfileClick extends StatelessWidget {
             title: Text('Share'),
             onTap: () => Share.share('com.example.projectwork'),
            ),
+          ListTile(
+            leading: Icon(Icons.shopping_cart),
+            title: Text('Your orders'),
+            onTap: () =>Navigator.push(context,MaterialPageRoute(builder: (context)=>EcommerceDetailTwoPage())),
+
+          ),
           ListTile(
             leading: Icon(Icons.notifications),
             title: Text('Notification'),

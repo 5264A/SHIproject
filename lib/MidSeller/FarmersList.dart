@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../Openpageforbuyers/openpage.dart';
+
 class FarmersListDisplayonSeller extends StatelessWidget {
   static const String path = "lib/src/pages/lists/list1.dart";
 
@@ -205,9 +207,9 @@ class Lists extends StatelessWidget {
                       ],
                     ),
 
-                    MaterialButton(onPressed: (){
-
-                    },child: Text('Buy'),
+                    MaterialButton(
+                   onPressed: () =>Navigator.push(context,MaterialPageRoute(builder: (context)=>EcommerceDetailTwoPage()),
+                   ),child: Text('Buy'),
                     color: Colors.blue,),
 
 

@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projectwork/LocationData/getlocation.dart';
-import 'package:projectwork/OrderList.dart';
+
 import 'package:projectwork/OrderListSellerSection/OrderListBuyerSection.dart';
+import 'package:projectwork/cart/cart.dart';
 
 import '../../EducationList/Educationmain.dart';
 import '../../StateListData/StateData.dart';
@@ -19,7 +20,7 @@ class Bottombar extends StatefulWidget {
 
 class _BottombarState extends State<Bottombar> {
   PageController pageController=PageController();
-  List<Widget>pages=[HomePage(),StateData(),EducationList(),OrderList()];
+  List<Widget>pages=[HomePage(),StateData(),EducationList(),CartOnePage()];
 
   // int selectIndex=Item as int;
   void onPageChanged(int index){
@@ -62,7 +63,7 @@ class _BottombarState extends State<Bottombar> {
                 label: 'Education',backgroundColor: Color(0xffD27D2D),),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart,color: Color(0xffD27D2D),),
-                label: 'Your Orders',backgroundColor: Color(0xffD27D2D),),
+                label: 'Cart',backgroundColor: Color(0xffD27D2D),),
           ],
         ),
       ),
